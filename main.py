@@ -67,7 +67,7 @@ def thread_data_store():
 def process_image(model, filepath, image: numpy.ndarray):
     panda = model(image).pandas().xyxy[0]
 
-    width, height = image.shape[:2]
+    height, width = image.shape[:2]
 
     classifications = []
     for index, row in panda.iterrows():

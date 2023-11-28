@@ -40,7 +40,7 @@ def find_image(results, threshold, required_classifications):
 
 def add_bounding_boxes(image, data):
     image = image.copy()
-    width, height = image.shape[:2]
+    height, width = image.shape[:2]
 
     for res in data['classifications']:
         x1 = math.floor(res['x1'] * width)
